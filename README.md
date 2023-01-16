@@ -1,4 +1,5 @@
 # Costing Data Project
+A software made to automate data entry into the costing_data.xml file for Chemstations.
 
 # Running costing_data_script.py - Arguments
 The program has a few arguments/parameters.
