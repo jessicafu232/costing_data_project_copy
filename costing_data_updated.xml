@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <CostingData>
 <!-- 
 	CostingSet year/month: The date the set of costing values corresponds to
@@ -14,48 +15,6 @@
 	Buildings: Factor for building costs (unused in CC)
 	EngSupervision: Factor for engineering and supervision (unused in CC)
 -->
-<CostingSet year="2022" month="October">
-	<CEIndex>816.2</CEIndex>
-	<Equipment>1034.4</Equipment>
-	<HTXR>865.7</HTXR>
-	<ProcessMachinery>1040.4</ProcessMachinery>
-	<Pipes>1462.3</Pipes>
-	<ProcessInstr>549.6</ProcessInstr>
-	<Pumps>1321.8</Pumps>
-	<ElectricalEquip>781.1</ElectricalEquip>
-	<Structural>1160.6</Structural>
-	<ConstructionLabor>362.4</ConstructionLabor>
-	<Buildings>807.8</Buildings>
-	<EngSupervision>311.6</EngSupervision>
-</CostingSet>
-<CostingSet year="2022" month="September">
-	<CEIndex>821.3</CEIndex>
-	<Equipment>1042.1</Equipment>
-	<HTXR>872.2</HTXR>
-	<ProcessMachinery>1047.5</ProcessMachinery>
-	<Pipes>1478.1</Pipes>
-	<ProcessInstr>556.8</ProcessInstr>
-	<Pumps>1311.6</Pumps>
-	<ElectricalEquip>784.5</ElectricalEquip>
-	<Structural>1169.8</Structural>
-	<ConstructionLabor>360.9</ConstructionLabor>
-	<Buildings>813.7</Buildings>
-	<EngSupervision>311.3</EngSupervision>
-</CostingSet>
-<CostingSet year="2022" month="August">
-	<CEIndex>824.5</CEIndex>
-	<Equipment>1046.7</Equipment>
-	<HTXR>879.5</HTXR>
-	<ProcessMachinery>1054.5</ProcessMachinery>
-	<Pipes>1480.9</Pipes>
-	<ProcessInstr>556.8</ProcessInstr>
-	<Pumps>1305.3</Pumps>
-	<ElectricalEquip>775.3</ElectricalEquip>
-	<Structural>1185.0</Structural>
-	<ConstructionLabor>358.9</ConstructionLabor>
-	<Buildings>825.8</Buildings>
-	<EngSupervision>311.6</EngSupervision>
-</CostingSet>
 <CostingSet year="2022" month="July">
 	<CEIndex>829.8</CEIndex>
 	<Equipment>1054.5</Equipment>

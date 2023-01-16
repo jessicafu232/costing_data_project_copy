@@ -8,9 +8,9 @@ import math
 # Notes: There is a ridiculous amount of for nested loops. This could probably be avoided by using numpy vectorization, 
 # but the scale of the data is too small for it to really make much of a relevant difference in speed.
 
-# Make it so the user can select which file they would like to read, since the filenames are strange (i.e. 'pci_download_1673888103.xls')
+# Make it so the user can select which file they would like to read, since the filenames are strange (i.e. 'data/pci_download_1673888103.xls')
 parser = argparse.ArgumentParser(description="Collect and store data")
-parser.add_argument("--data", '-d', default='raw_data.xls', help='Location of a raw data file')
+parser.add_argument("--data", '-d', default='data/raw_data.xls', help='Location of a raw data file (usually data/myfilename.xls)')
 parser.add_argument("--filename", '-fn', default='costing_data_updated', help='The name of the updated data file (without the .xml extension)')
 args = parser.parse_args()
 
@@ -150,6 +150,6 @@ for year in input_dict:
 			new_set.tail = '\n'
 
 # Writing into the new, updated file
-tree.write(args.filename+'.xml', pretty_print=True)
+tree.write(args.filename+'.xml', pretty_print=True, encoding='utf-8', xml_declaration=True)
 
 print("Wrote into", args.filename + ".xml")
