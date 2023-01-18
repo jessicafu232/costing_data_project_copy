@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version = "1.0" encoding="utf-8"?>
 <CostingData>
 <!-- 
 	CostingSet year/month: The date the set of costing values corresponds to
@@ -15,62 +15,6 @@
 	Buildings: Factor for building costs (unused in CC)
 	EngSupervision: Factor for engineering and supervision (unused in CC)
 -->
-<CostingSet year="2022" month="July">
-	<CEIndex>829.8</CEIndex>
-	<Equipment>1054.5</Equipment>
-	<HTXR>891.0</HTXR>
-	<ProcessMachinery>1073.9</ProcessMachinery>
-	<Pipes>1480.2</Pipes>
-	<ProcessInstr>558.8</ProcessInstr>
-	<Pumps>1304.4</Pumps>
-	<ElectricalEquip>770.0</ElectricalEquip>
-	<Structural>1199.5</Structural>
-	<ConstructionLabor>357.1</ConstructionLabor>
-	<Buildings>834.2</Buildings>
-	<EngSupervision>312.0</EngSupervision>
-</CostingSet>
-<CostingSet year="2022" month="June">
-	<CEIndex>832.6</CEIndex>
-	<Equipment>1058.7</Equipment>
-	<HTXR>897.2</HTXR>
-	<ProcessMachinery>1074.4</ProcessMachinery>
-	<Pipes>1497.0</Pipes>
-	<ProcessInstr>570.5</ProcessInstr>
-	<Pumps>1285.2</Pumps>
-	<ElectricalEquip>767.9</ElectricalEquip>
-	<Structural>1189.8</Structural>
-	<ConstructionLabor>355.8</ConstructionLabor>
-	<Buildings>840.6</Buildings>
-	<EngSupervision>312.2</EngSupervision>
-</CostingSet>
-<CostingSet year="2022" month="May">
-	<CEIndex>831.1</CEIndex>
-	<Equipment>1056.4</Equipment>
-	<HTXR>898.9</HTXR>
-	<ProcessMachinery>1075.3</ProcessMachinery>
-	<Pipes>1494.7</Pipes>
-	<ProcessInstr>575.0</ProcessInstr>
-	<Pumps>1273.3</Pumps>
-	<ElectricalEquip>756.6</ElectricalEquip>
-	<Structural>1177.7</Structural>
-	<ConstructionLabor>354.3</ConstructionLabor>
-	<Buildings>847.4</Buildings>
-	<EngSupervision>311.5</EngSupervision>
-</CostingSet>
-<CostingSet year="2022" month="April">
-	<CEIndex>816.3</CEIndex>
-	<Equipment>1037.1</Equipment>
-	<HTXR>876.0</HTXR>
-	<ProcessMachinery>1063.9</ProcessMachinery>
-	<Pipes>1472.8</Pipes>
-	<ProcessInstr>573.5</ProcessInstr>
-	<Pumps>1248.9</Pumps>
-	<ElectricalEquip>751.8</ElectricalEquip>
-	<Structural>1144.7</Structural>
-	<ConstructionLabor>348.3</ConstructionLabor>
-	<Buildings>827.0</Buildings>
-	<EngSupervision>311.8</EngSupervision>
-</CostingSet>
 <CostingSet year="2022" month="March">
 	<CEIndex>803.6</CEIndex>
 	<Equipment>1017.9</Equipment>
