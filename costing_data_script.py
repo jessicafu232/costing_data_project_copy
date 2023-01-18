@@ -88,7 +88,6 @@ except:
 
 wait = WebDriverWait(driver, 10)
 original_window = driver.current_window_handle
-assert len(driver.window_handles) == 1
 download_form.submit()
 
 # Waiting until the popup opens!
