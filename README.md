@@ -1,6 +1,10 @@
 # Costing Data Project
 A software made to automate data entry into the `costing_data.xml` file for Chemstations.
 
+# Running costing_data_script.py
+In order to run this program, you need to first download the most recent costing_data.xml file and place it into the main repository. This should replace any old versions previously there.
+If you would like to run the program without automating the browser, run `costing_data_script_no_browser.py` instead. In order to run this version, you need to download the most recent CEPCI data directly from their website, and move it into the `data/` folder. This is also detailed below.
+
 # Running costing_data_script.py - Arguments
 The program has a few arguments/parameters.
 
