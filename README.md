@@ -1,5 +1,5 @@
 # Costing Data Project
-A software made to automate data entry into the costing_data.xml file for Chemstations.
+A software made to automate data entry into the `costing_data.xml` file for Chemstations.
 
 # Running costing_data_script.py - Arguments
 The program has a few arguments/parameters.
@@ -8,7 +8,7 @@ The program has a few arguments/parameters.
 * Name of the temporary update file to be saved. Default can be changed in file as well (i.e. `costing_data_updated.xml`)
 
 `--datafile`, `-df`
-* **Note: Only exists for costing_data_script_no_browser.py.
+* **Note: Only exists for `costing_data_script_no_browser.py`.
 * Location of a raw data file (usually `data/myfilename.xls`)
 
 # Running browser automation
