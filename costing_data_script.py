@@ -31,7 +31,7 @@ parser.add_argument("--filename", '-fn', default='preview_file', help='The name 
 args = parser.parse_args()
 
 
-# Parsing XML file ahead of time to reference ----------------------------------------------------------------------------------------------------------------
+# Parsing XML file ahead of time to reference -------------------------------------------------------------------------------------------------------------------------
 tree = ET.parse('costing_data.xml')
 root = tree.getroot()
 
@@ -42,7 +42,8 @@ most_recent_month = root[1].attrib['month']
 month_dict = {'January': '1', 'February': '2', 'March': '3', 'April': '4', 'May': '5', 'June': '6', 'July': '7', 'August': '8', 'September': '9', 'October': '10', 'November': '11', 'December': '12'}
 most_recent_month_num = month_dict[most_recent_month]
 
-# Downloading the most recent data file! ---------------------------------------------------------------------------------------------------------------------
+
+# Downloading the most recent data file! ------------------------------------------------------------------------------------------------------------------------------
 
 # Opening a Chrome tab
 driver = webdriver.Chrome()
@@ -268,7 +269,8 @@ tree.write(args.filename+'.xml', pretty_print=True, encoding='utf-8', xml_declar
 
 print("Wrote into", args.filename + ".xml")
 
-# Checking with the user if they would like to keep this file -----------------------------------------------------------------------------------------------------------------------------------
+
+# Checking with the user if they would like to keep this file ----------------------------------------------------------------------------------------------------------
 print("Previewing file...")
 
 p = subprocess.Popen(["notepad.exe", args.filename + '.xml'])
@@ -288,5 +290,5 @@ elif user_response == 'n':
 	print("Saving the file as " + args.filename + ".xml. The old costing_data.xml file will not be overriden.")
 
 print("Saved! Closing program...")
-print("If the program does not close after 30 seconds, press Ctrl+C to exit. This will not cause any issues.")
+print("If the program does not close after 30 seconds, press Ctrl+C to exit. This will not cause any issues.") # This has to do with Selenium, but I'm not sure what the problem is.
 quit()

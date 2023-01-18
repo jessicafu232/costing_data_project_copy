@@ -56,6 +56,7 @@ for i in range(len(data)):
 book.save('excel_data' + '.xls')
 f.close()
 
+
 # Reading excel file -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 # The data begins at position [2,1], with 2 being the index of the row, and 1 being the index of the column.
@@ -180,7 +181,7 @@ tree.write(args.filename+'.xml', pretty_print=True, encoding='utf-8', xml_declar
 
 print("Wrote into", args.filename + ".xml")
 
-# Checking with the user if they would like to keep this file -----------------------------------------------------------------------------------------------------------------------------------
+# Checking with the user if they would like to keep this file -----------------------------------------------------------------------------------------------------------
 print("Previewing file...")
 
 p = subprocess.Popen(["notepad.exe", args.filename + '.xml'])
