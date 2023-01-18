@@ -29,13 +29,14 @@ parser.add_argument("--filename", '-fn', default='preview_file', help='The name 
 args = parser.parse_args()
 
 
-# Parsing XML file ahead of time to reference ----------------------------------------------------------------------------------------------------------------
+# Parsing XML file ahead of time to reference ---------------------------------------------------------------------------------------------------------------------------
 tree = ET.parse('costing_data.xml')
 root = tree.getroot()
 
 # Checking the most recent year/months in the file ------------------------------------------------------
 most_recent_year = root[1].attrib['year']
 most_recent_month = root[1].attrib['month']
+
 
 # Converting data into excel file ---------------------------------------------------------------------------------------------------------------------------------------
 # This portion is necessary because the raw data saved from the CEPCI website isn't actually an excel file, it's a text file with a .xls extension (for some reason)
@@ -180,6 +181,7 @@ for year in input_dict:
 tree.write(args.filename+'.xml', pretty_print=True, encoding='utf-8', xml_declaration=True)
 
 print("Wrote into", args.filename + ".xml")
+
 
 # Checking with the user if they would like to keep this file -----------------------------------------------------------------------------------------------------------
 print("Previewing file...")
