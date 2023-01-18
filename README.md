@@ -12,7 +12,7 @@ The program has a few arguments/parameters.
 
 `--dwpath`, `-dp`
 * **Note: Only exists for `costing_data_script.py`.
-* The path from the costing_data_project repository to the Downloads folder in your computer. This is so that the program can grab the most recently downloaded file from the Downloads folder after running the automated browser to download the PCI data file. 
+* The path from the costing_data_project repository to the Downloads folder in your computer. This is so that the program can grab the most recently downloaded file from the Downloads folder after running the automated browser to download the PCI data file. An accurate path is necessary to run the program.
 
 `--filename`, `-fn`
 * Name of the temporary update file to be saved. Default can be changed in file as well (i.e. `costing_data_updated.xml`)
