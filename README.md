@@ -3,14 +3,16 @@ A software made to automate data entry into the `costing_data.xml` file for Chem
 
 ## Running costing_data_script.py
 In order to run this program, you need to first download the most recent costing_data.xml file and place it into the main repository. This should replace any old versions previously there.  
-Furthermore, the user should use the `--dwpath` to specify where their downloads folder is, relative to the location of the costing_data_project repository on their machine. The default is that the path is `../../../Downloads/*`, which exits the costing_data_project folder, exits the Github folder, and exits the Documents folder, before entering the Downloads folder and presenting a list of all the files. As shown, the format the user should follow for this is `../(however many times)Downloads/*`.  
-If you would like to run the program without automating the browser, run `costing_data_script_no_browser.py` instead. In order to run this version, you need to download the most recent CEPCI data directly from their website, and move it into the `data/` folder. This is also detailed below.
+Furthermore, the user should use the `--dwpath` to specify where their downloads folder is, relative to the location of `costing_data_script.py` on their machine. The default is that the path is `../../../Downloads/*`, which exits the costing_data_project folder, exits the Github folder, and exits the Documents folder, before entering the Downloads folder and presenting a list of all the files. As shown, the format the user should follow for this is `../(however many times)Downloads/*`. An accurate path is necessary in order to successfully run `costing_data_script.py`.  
+  
+If you would like to run the program without automating the browser, run `costing_data_script_no_browser.py` instead. In order to run this version, you need to download the most recent CEPCI data directly from their website, and move it into the `data/` folder. You shouldn't specify a path to the Downloads folder in this version.
 
 ## Running costing_data_script.py - Arguments
 The program has a few arguments/parameters.
 
 `--dwpath`, `-dp`
-* The path from the costing_data_project repository to the Downloads folder in your computer.
+* **Note: Only exists for `costing_data_script.py`.
+* The path from the costing_data_project repository to the Downloads folder in your computer. This is so that the program can grab the most recently downloaded file from the Downloads folder after running the automated browser to download the PCI data file. 
 
 `--filename`, `-fn`
 * Name of the temporary update file to be saved. Default can be changed in file as well (i.e. `costing_data_updated.xml`)
