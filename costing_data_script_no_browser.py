@@ -15,9 +15,16 @@ import os
 
 # Notes: There is a ridiculous amount of for nested loops. This could probably be avoided by using numpy vectorization, 
 # but the scale of the data is too small for it to really make much of a relevant difference in speed.
+# Also, in order to run this program, you need to download your own data file, and move it to the data/ folder. Otherwise, it will automatically use the most
+# recent file in the folder (the only demo file currently in the folder is raw_data.xls)
+
+# Finding the latest file in the data folder
+list_of_data_files = glob.glob('data/*') 
+latest_data_file = max(list_of_data_files, key=os.path.getctime)
 
 # Make it so the user can select which file they would like to read, since the filenames are strange (i.e. 'data/pci_download_1673888103.xls')
 parser = argparse.ArgumentParser(description="Collect and store data")
+parser.add_argument("--datafile", '-df', default=latest_data_file, help='Location of a raw data file (usually data/myfilename.xls)')
 parser.add_argument("--filename", '-fn', default='preview_file', help='The name of the updated data file (without the .xml extension)')
 args = parser.parse_args()
 
@@ -36,11 +43,7 @@ most_recent_month = root[1].attrib['month']
 book = xlwt.Workbook()
 ws = book.add_sheet('Sheet1')  # Add a sheet
 
-# Finding the latest file in the data folder
-list_of_data_files = glob.glob('data/*') 
-latest_data_file = max(list_of_data_files, key=os.path.getctime)
-
-f = open(latest_data_file, 'r+') # Opening the latest file
+f = open(args.datafile, 'r+') # Opening the latest file
 
 data = f.readlines() # Read all lines at once
 
@@ -197,5 +200,4 @@ elif user_response == 'n':
 	print("Saving the file as " + args.filename + ".xml. The old costing_data.xml file will not be overriden.")
 
 print("Saved! Closing program...")
-#print("If the program does not close after 30 seconds, press Ctrl+C to exit. This will not cause any issues.")
 quit()
