@@ -28,6 +28,7 @@ import os
 # Make it so the user can select which file they would like to read, since the filenames are strange (i.e. 'data/pci_download_1673888103.xls')
 parser = argparse.ArgumentParser(description="Collect and store data")
 parser.add_argument("--filename", '-fn', default='preview_file', help='The name of the updated data file (without the .xml extension)')
+parser.add_argument("--dwpath", '-dp', default='../../../Downloads/*', help='The path from the costing_data_project repository to the Downloads folder in your computer.')
 args = parser.parse_args()
 
 
@@ -110,7 +111,7 @@ if driver:
 	driver.quit()
 
 # Finding the latest file in the download folder
-list_of_files = glob.glob('../../../Downloads/*') # * means all if need specific format then *.csv
+list_of_files = glob.glob(args.dwpath) # Change at will
 latest_file = max(list_of_files, key=os.path.getctime)
 
 # Getting filename
