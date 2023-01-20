@@ -14,6 +14,14 @@ The program has a few arguments/parameters.
 * **Note: Only exists for `costing_data_script.py`.
 * The path from the costing_data_project repository to the Downloads folder in your computer. This is so that the program can grab the most recently downloaded file from the Downloads folder after running the automated browser to download the PCI data file. An accurate path is necessary to run the program, and the default path is `../../../Downloads/*`.
 
+`--username`, `-un`
+* **Note: Only exists for `costing_data_script.py`.
+* The username/email to use to log into chemengonline.com. The default is `whitneyg@chemstations.com`.
+
+`--password`, `-pw`
+* **Note: Only exists for `costing_data_script.py`.
+* The password to use to log into chemengonline.com. The default is `CHEMCADNXTis1`.
+
 `--filename`, `-fn`
 * Name of the temporary update file to be saved. Default can be changed in file as well (i.e. `costing_data_updated.xml`)
 
