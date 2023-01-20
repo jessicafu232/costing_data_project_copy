@@ -29,6 +29,9 @@ import os
 parser = argparse.ArgumentParser(description="Collect and store data")
 parser.add_argument("--filename", '-fn', default='preview_file', help='The name of the updated data file (without the .xml extension)')
 parser.add_argument("--dwpath", '-dp', default='../../../Downloads/*', help='The path from the costing_data_project repository to the Downloads folder in your computer.')
+parser.add_argument("--username", '-un', default='whitneyg@chemstations.com', help='Username/email to use to log into chemengonline.com. The default is whitneyg@chemstations.com.')
+parser.add_argument("--password", '-pw', default='CHEMCADNXTis1', help='Password to use to log into chemengonline.com. The default is CHEMCADNXTis1.')
+
 args = parser.parse_args()
 
 
@@ -57,11 +60,11 @@ ActionChains(driver).move_to_element(button).click(button).perform()
 
 login_form = driver.find_element(By.NAME, "log")
 login_form.clear()
-login_form.send_keys("whitneyg@chemstations.com")
+login_form.send_keys(args.username)
 
 password_form = driver.find_element(By.NAME, "pwd")
 password_form.clear()
-password_form.send_keys("CHEMCADNXTis1")
+password_form.send_keys(args.password)
 
 password_form.submit()
 
@@ -115,10 +118,15 @@ list_of_files = glob.glob(args.dwpath) # Change at will
 latest_file = max(list_of_files, key=os.path.getctime)
 
 # Getting filename
-a = str(latest_file).split('\\')[1]
+latest_filename = str(latest_file).split('\\')[1]
+
+# Checking if the dwpath arg is wrong
+if latest_filename[0:3] != "pci":
+	raise OSError("You are trying to grab the wrong file. Set or check that the path specified by the --dwpath argument is the correct path to the \
+Downloads folder from this repository. For more information, look into the README.")
 
 # Moving the file to the data folder in the computer
-os.rename(latest_file, 'data/' + a)
+os.rename(latest_file, 'data/' + latest_filename)
 
 
 # Converting data into excel file ---------------------------------------------------------------------------------------------------------------------------------------
