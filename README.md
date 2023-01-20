@@ -27,7 +27,7 @@ The program has a few arguments/parameters.
 
 `--datafile`, `-df`
 * **Note: Only exists for `costing_data_script_no_browser.py`.
-* Location of a raw data file (usually `data/myfilename.xls`)
+* Location of a raw data file (usually `data/myfilename.xls`). The default is `data/`.
 
 ## Running browser automation
 The file, `costing_data_script.py` automates it so that the browser will automatically open to download the newest CEPCI data file. Chrome is required in order to run this feature. There are certain wait times, but the browser should not stall at one web page without any action for more than ten seconds.
