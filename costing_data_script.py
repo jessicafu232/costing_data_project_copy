@@ -29,8 +29,8 @@ import os
 parser = argparse.ArgumentParser(description="Collect and store data")
 parser.add_argument("--filename", '-fn', default='preview_file', help='The name of the updated data file (without the .xml extension)')
 parser.add_argument("--dwpath", '-dp', default='../../../Downloads/*', help='The path from the costing_data_project repository to the Downloads folder in your computer.')
-parser.add_argument("--username", '-un', default='whitneyg@chemstations.com', help='Username/email to use to log into chemengonline.com. The default is whitneyg@chemstations.com.')
-parser.add_argument("--password", '-pw', default='CHEMCADNXTis1', help='Password to use to log into chemengonline.com. The default is CHEMCADNXTis1.')
+parser.add_argument("--username", '-un', default='example@domain.com', help='Username/email to use to log into chemengonline.com. The default is example@domain.com.')
+parser.add_argument("--password", '-pw', default='example_password', help='Password to use to log into chemengonline.com. The default is example_password.')
 
 args = parser.parse_args()
 
