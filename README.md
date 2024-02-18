@@ -16,11 +16,11 @@ The program has a few arguments/parameters.
 
 `--username`, `-un`
 * **Note: Only exists for `costing_data_script.py`.
-* The username/email to use to log into chemengonline.com. The default is `whitneyg@chemstations.com`.
+* The username/email to use to log into chemengonline.com. The default is `example@domail.com`.
 
 `--password`, `-pw`
 * **Note: Only exists for `costing_data_script.py`.
-* The password to use to log into chemengonline.com. The default is `CHEMCADNXTis1`.
+* The password to use to log into chemengonline.com. The default is `example_password`.
 
 `--filename`, `-fn`
 * Name of the temporary update file to be saved. Default can be changed in file as well (i.e. `costing_data_updated.xml`)
