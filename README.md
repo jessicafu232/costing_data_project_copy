@@ -16,7 +16,7 @@ The program has a few arguments/parameters.
 
 `--username`, `-un`
 * **Note: Only exists for `costing_data_script.py`.
-* The username/email to use to log into chemengonline.com. The default is `example@domail.com`.
+* The username/email to use to log into chemengonline.com. The default is `example@domain.com`.
 
 `--password`, `-pw`
 * **Note: Only exists for `costing_data_script.py`.
